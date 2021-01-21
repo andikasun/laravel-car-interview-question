@@ -8,6 +8,15 @@ Whenever a client called in to schedule for an appointment. The admin staff need
 
 The staff at the workshop will need to have access to the appointments on daily basis in order to prepare the required parts and tools.
 
+## Assumptions and notes
+1. Added seeding script for appointments for testing purpose
+2. start_time and end_time in my opinion should be of type datetime instead of varchar, but there might be other design concern, so I keep the format as varchar(255)
+3. I implemented eager loading on all API relationship for ease of use, this should be modified to cater to certain API use case for efficiency.
+4. I assume each workshop is only capable of serving one appointment at any given time
+5. Creation of appointment will be done by a software/web client that already have the information of car_id and workshop_id, hence it will assume it's valid.
+6. I disabled CSRF token protection for api/* route
+7. There is a bug in error message where I required the end_time > start_time, the error message can't express correctly, but instead will display "The end time must be greater than 19 characters." 
+
 ## Your task
 
 Create endpoints that allows the admin staff to:
