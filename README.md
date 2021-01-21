@@ -31,11 +31,21 @@ CREATE FUNCTION `st_distance_sphere`(`pt1` POINT, `pt2` POINT) RETURNS
 
 ## Testing
 Manual testing endpoint
-1a. Sample listing appointments by workshop_id
-http://localhost/laravel-carro/laravel-car-interview-question/public/index.php/api/v1/workshop?workshop_id=3
-1b. Sample listing appointments by workshop_name
-http://localhost/laravel-carro/laravel-car-interview-question/public/index.php/api/v1/workshop?workshop_name=724%20Ang%20Mo%20Kio%20Workshop
-3. Sample workshops recommendation
+1. Sample listing appointments by workshop_id
+```http://localhost/laravel-carro/laravel-car-interview-question/public/index.php/api/v1/workshop?workshop_id=3```
+
+2. Sample listing appointments by workshop_name
+```http://localhost/laravel-carro/laravel-car-interview-question/public/index.php/api/v1/workshop?workshop_name=724%20Ang%20Mo%20Kio%20Workshop```
+
+3. Scheduling appointment script using postman
+```
+car_id=1
+workshop_id=2
+start_time=2021-04-20 10:00:17
+end_time=2021-04-20 12:00:17
+```
+
+4. Sample workshops recommendation
 ```http://localhost/laravel-carro/laravel-car-interview-question/public/index.php/api/v1/recommendworkshop?start_time=2021-01-20%2009:00:17&end_time=2021-01-20%2015:00:17&latitude=1.3000&longitude=102```
 
 
