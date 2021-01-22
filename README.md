@@ -22,10 +22,11 @@ CREATE FUNCTION `st_distance_sphere`(`pt1` POINT, `pt2` POINT) RETURNS
 ```
 
 ## Testing
-PHPUnit test
+**PHPUnit test**
+
 run ```composer test``` on the root folder
 
-Manual testing endpoint
+**Manual testing endpoint**
 1. Sample listing appointments by workshop_id
 ```http://localhost/laravel-carro/laravel-car-interview-question/public/index.php/api/v1/workshop?workshop_id=3```
 
