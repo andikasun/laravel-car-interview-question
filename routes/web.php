@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('api/v1/appointment', 'AppointmentController');
+Route::resource('api/v1/workshop', 'WorkshopController');
+Route::get('api/v1/recommendworkshop', 'WorkshopController@recommend');
